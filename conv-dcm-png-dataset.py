@@ -8,7 +8,7 @@ import os
 def get_paientid_from_filename (  filename , rootpathname ) : 
   tmp = filename.replace ( rootpathname , '' )
 #  re.sub( pattern, replacement, string, count=0, flags=0)
-  tmp = re.sub( '^/+', '', tmp ) # , count=0, flags=0
+  tmp = re.sub( '^//+', '', tmp ) # , count=0, flags=0
   atkns = tmp.split ( '/')
   return atkns[ 0 ]
 
